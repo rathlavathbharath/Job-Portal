@@ -74,7 +74,7 @@
                                 <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                                 data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary" name="apply">Save changes</button>
+                                        <button type="submit" class="btn btn-primary" name="apply">Submit</button>
                                 </div>
                                 </form>
                         </div>
@@ -84,9 +84,10 @@
         <div class="row m-0" style="margin-bottom: 10px;">
                 <div class="col-md-12">
                         <div class="jumbotron jumbotron-fluid"
-                                style="background-image:url('backgroundimage.jpg'); backgroung-size:cover;">
-                                <div class="container" style="color:#fff; padding:70px;">
-                                        <h1>Job Portal</h1>
+                                style="background-image:url('backgroundimage.jpg'); background-size:cover; position: relative;">
+                                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+                                <div class="container" style="color: white; padding:70px;">
+                                        <h1 style="color: white; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Job Portal</h1>
                                         <p>Available Jobs on the portal</p>
                                 </div>
                         </div>
