@@ -1,4 +1,4 @@
-<?php include 'config.php'?>
+<?php include 'config.php' ?>
 <!doctype html>
 <html lang="en">
 
@@ -46,9 +46,9 @@
                 .main {
                         margin-left: 160px;
                         font-size: 20px;
-                        padding: 0px 10px; 
-                        margin-top: 60px;
-                        height: 1000px;  
+                        padding: 0px 10px;
+                        margin-top: 80px;
+                        height: 1000px;
                 }
 
                 @media screen and (max-height: 450px) {
@@ -59,14 +59,18 @@
                         .sidebar a {
                                 font-size: 18px;
                         }
-                } 
+                }
 
-                .navbar{
+                .navbar {
                         overflow: hidden;
                         background-color: #333;
                         position: fixed;
                         top: 0;
                         width: 100%;
+                }
+                .container-fluid{
+                        background-color: crimson;
+                        padding: 10px;
                 }
         </style>
 </head>
@@ -76,15 +80,16 @@
                 <div class="container-fluid">
                         <a class="navbar-brand" href="#">
                                 <img src="https://thumbs.dreamstime.com/b/icon-admin-administrator-admin-144970320.jpg"
-                                        alt="" width="30" height="24" class="d-inline-block align-text-top"> Admin Dashboard
+                                        alt="" width="30" height="24" class="d-inline-block align-text-top">
+                                        <span style="color: #ffffff; font-size: 25px;">Admin Dashboard</span>
                         </a>
                 </div>
         </nav>
         <div class="sidebar">
                 <a class="active" href="admin.php">Jobs</a>
                 <a href="candidates.php">Candidates</a>
-                <a href="#">About</a>
-                <a href="#">Contact Us</a>
+                <a href="about.php">About</a>
+                <a href="contact.php">Contact Us</a>
         </div>
         <div class="main">
                 <table class="table">
@@ -96,31 +101,31 @@
                                         <th scope="col">Company Name</th>
                                         <th scope="col">Job Position</th>
                                         <th scope="col">Education Qualification</th>
-                                        <th scope="col">Skilla Required</th>
+                                        <th scope="col">Skills Required</th>
                                 </tr>
                         </thead>
-                        <tbody> 
-                          <?php
-                          $sql ="Select * from candidates";
-                          $result = mysqli_query($conn,$sql);
-                          $i=0;
-                          if($result->num_rows>0){
-                                while($rows = $result->fetch_assoc()){
-                                        echo'
+                        <tbody>
+                                <?php
+                                $sql = "Select * from candidates";
+                                $result = mysqli_query($conn, $sql);
+                                $i = 0;
+                                if ($result->num_rows > 0) {
+                                        while ($rows = $result->fetch_assoc()) {
+                                                echo '
                                         <tr>
-                                           <th scope="row">'.++$i.'</th>
-                                           <td>'.$rows['name'].'</td>
-                                           <td>'.$rows['email'].'</td>
-                                           <td>'.$rows['cname'].'</td>
-                                           <td>'.$rows['position'].'</td>
-                                           <td>'.$rows['education'].'</td>
-                                           <td>'.$rows['skills'].'</td>
+                                           </tr><th scope="row">' . ++$i . '</th>
+                                           <td>' . $rows['name'] . '</td>
+                                           <td>' . $rows['email'] . '</td>
+                                           <td>' . $rows['cname'] . '</td>
+                                           <td>' . $rows['position'] . '</td>
+                                           <td>' . $rows['education'] . '</td>
+                                           <td>' . $rows['skills'] . '</td>
                                         </tr>';
+                                        }
+                                } else {
+                                        echo "";
                                 }
-                          }else{
-                                echo "";
-                          }
-                          ?>
+                                ?>
                         </tbody>
                 </table>
         </div>

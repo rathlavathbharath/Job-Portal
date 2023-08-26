@@ -25,12 +25,16 @@
                                 </div>
                                 <div class="modal-body">
                                         <form method="POST" enctype="multipart/form-data">
+                                                <span class="text text-danger">
+                                                        <?php echo $error ?>
+                                                </span>
+
                                                 <div class="mb-3">
                                                         <label for="exampleInputEmail1" class="form-label">Email
                                                                 address</label>
                                                         <input type="email" class="form-control" id="exampleInputEmail1"
                                                                 aria-describedby="emailHelp" required name="email"
-                                                                placeholder="Enter your Email">
+                                                                placeholder="Enter your Email" required>
                                                         <div id="emailHelp" class="form-text">We'll never share your
                                                                 email with anyone else.</div>
                                                 </div>
@@ -38,45 +42,52 @@
                                                         <label for="exampleInputName" class="form-label">Full
                                                                 Name</label>
                                                         <input type="text" class="form-control" id="exampleInputName"
-                                                                name="name" placeholder="Enter your Name">
+                                                                name="name" placeholder="Enter your Name" required>
                                                 </div>
                                                 <div class="mb-3">
                                                         <label for="exampleInputName"
                                                                 class="form-label">Position</label>
                                                         <input type="text" class="form-control" id="exampleInputName"
-                                                                name="position" placeholder="Enter Position">
+                                                                name="position" placeholder="Enter Position" required>
                                                 </div>
                                                 <div class="mb-3">
                                                         <label for="exampleInputName" class="form-label">Company
                                                                 Name</label>
                                                         <input type="text" class="form-control" id="exampleInputName"
-                                                                name="cname" placeholder="Enter Company Name">
+                                                                name="cname" placeholder="Enter Company Name" required>
                                                 </div>
                                                 <div class="mb-3">
                                                         <label for="exampleInputEdu" class="form-label">Education
                                                                 Qualification</label>
                                                         <input type="text" class="form-control" id="exampleInputEdu"
                                                                 name="edu"
-                                                                placeholder="Enter your Education Qualification">
+                                                                placeholder="Enter your Education Qualification" required>
                                                 </div>
                                                 <div class="mb-3">
                                                         <label for="exampleInputSkills"
                                                                 class="form-label">Skills</label>
                                                         <input type="text" class="form-control" id="exampleInputSkills"
-                                                                name="skills" placeholder="Enter your Skills">
+                                                                name="skills" placeholder="Enter your Skills" required>
                                                 </div>
-                                                <!-- <div class="mb-3">
+                                                <!--<div class="mb-3">
                                                         <label for="exampleInputCV" class="form-label">Upload
                                                                 Resume</label>
-                                                        <input type="file" class="form-control" id="exampleInputCV">
+                                                        <input type="file" class="form-control" id="exampleInputCV" 
+                                                                name="resume" placeholder="Upload your Resume">
                                                 </div> -->
+                                                <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary"
+                                                                name="apply">Submit</button>
+                                                </div>
+                                        </form>
                                 </div>
-                                <div class="modal-footer">
+                                <!--<div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                                 data-bs-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary" name="apply">Submit</button>
-                                </div>
-                                </form>
+                                </div>-->
                         </div>
                 </div>
         </div>
@@ -85,9 +96,13 @@
                 <div class="col-md-12">
                         <div class="jumbotron jumbotron-fluid"
                                 style="background-image:url('backgroundimage.jpg'); background-size:cover; position: relative;">
-                                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+                                <div
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);">
+                                </div>
                                 <div class="container" style="color: white; padding:70px;">
-                                        <h1 style="color: white; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Job Portal</h1>
+                                        <h1
+                                                style="color: white; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                                                Job Portal</h1>
                                         <p>Available Jobs on the portal</p>
                                 </div>
                         </div>
@@ -103,7 +118,7 @@
                         while ($rows = $result->fetch_assoc()) {
                                 echo '
                         <div class="col-md-4">
-                         <div style="background-color:#fff; box-shadow:10px 10px #eee; border:1px solid black; margin-top:30px; padding: 10px;">
+                         <div style="background-color: white; box-shadow:3px 3px 8px 3px #888888; border:2px solid black; border-radius: 3px; margin-top: 30px; margin-bottom: 3em; padding: 10px;">
                                 <h1 style="text-align: center;">' . $rows['job_position'] . '</h1>
                                 <p style="text-align: center;">' . $rows['cname'] . '</p>
                                 <p><b>Skills Required:</b> ' . $rows['skills'] . '</p>

@@ -1,4 +1,4 @@
-<?php include 'config.php'?>
+<?php include 'config.php' ?>
 <!doctype html>
 <html lang="en">
 
@@ -18,9 +18,11 @@
                         background-image: url('backgroundimage.jpg');
                         background-size: cover;
                 }
-                form{
+
+                form {
                         background-color: #fff;
                         margin-top: 3em;
+                        margin-bottom: 3em;
                         margin-left: 30em;
                         margin-right: 7em;
                         padding: 30px;
@@ -31,26 +33,39 @@
 
 <body>
         <form action="" method="POST">
+                <span class="text text-danger">
+                        <?php echo $error ?>
+                </span>
+                <?php
+                if (isset($registrationSuccess) && $registrationSuccess) {
+                        echo '<div class="alert alert-success" role="alert">Registration Successful! You can now login.</div>';
+                }
+                ?>
                 <div class="mb-3">
                         <label for="exampleInputName" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="exampleInputName" name="name" placeholder="Enter your Name">
+                        <input type="text" class="form-control" id="exampleInputName" name="name"
+                                placeholder="Enter your Name">
                 </div>
                 <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter your Email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                name="email" placeholder="Enter your Email">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                         <label for="exampleInputNumber" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" id="exampleInputNumber" name="number" placeholder="Enter your Phone Number">
+                        <input type="number" class="form-control" id="exampleInputNumber" name="number"
+                                placeholder="Enter your Phone Number">
                 </div>
                 <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Enter your password">
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                                placeholder="Enter your password">
                 </div>
                 <div class="mb-3">
                         <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
+                        <input type="password" class="form-control" id="exampleInputPassword2" name="confirm_password"
+                                placeholder="Confirm Password">
                 </div>
                 <button type="submit" class="btn btn-primary" name="register">Register</button>
                 <br>

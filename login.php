@@ -1,4 +1,4 @@
-<?php include 'config.php'?>
+<?php include 'config.php' ?>
 <!doctype html>
 <html lang="en">
 
@@ -18,7 +18,8 @@
                         background-image: url('backgroundimage.jpg');
                         background-size: cover;
                 }
-                form{
+
+                form {
                         background-color: #fff;
                         margin-top: 3em;
                         margin-left: 30em;
@@ -31,20 +32,23 @@
 
 <body>
         <form method="POST">
-                <span class="text text-danger"><?php echo $error ?></span>
+                <span class="text text-danger">
+                        <?php echo $error ?>
+                </span>
                 <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"  placeholder="Enter your Email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                name="email" placeholder="Enter your Email">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Enter your password">
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                                placeholder="Enter your password">
                 </div>
                 <button type="submit" class="btn btn-primary" name="login">Login</button>
                 <p style="text-align: center">New User?<br>Create Account <a href="register.php">Sign Up</a></p>
         </form>
-
 
         <!-- Optional JavaScript; choose one of the two! -->
 
