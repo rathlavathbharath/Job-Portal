@@ -5,13 +5,13 @@ How It Works:-
 
 For Job Seekers
 
-Browse Job Listings: Job seekers can visit the company's website and explore a comprehensive array of job listings.
-Apply Effortlessly: A user-friendly application form is provided for job seekers to submit applications for positions that align with their qualifications.
+1. Browse Job Listings: Job seekers can visit the company's website and explore a comprehensive array of job listings.
+2. Apply Effortlessly: A user-friendly application form is provided for job seekers to submit applications for positions that align with their qualifications.
 
 For Admin
 
-Admin Dashboard: Administrators can securely log in to the Admin dashboard, equipped with authentication features.
-Manage Job Listings: Admins can seamlessly create, edit, and post job listings, effectively showcasing the company's open positions.
-Candidate Management: The Admin dashboard allows tracking of candidates who have applied for specific job listings, streamlining the selection process.
+1. Admin Dashboard: Administrators can securely log in to the Admin dashboard, equipped with authentication features.
+2. Manage Job Listings: Admins can seamlessly create, edit, and post job listings, effectively showcasing the company's open positions.
+4. Candidate Management: The Admin dashboard allows tracking of candidates who have applied for specific job listings, streamlining the selection process.
 
  
